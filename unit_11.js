@@ -34,6 +34,9 @@ function t2(elem) {
         if(!isNaN(parseInt(element.textContent))){
             s += parseInt(element.textContent)
         }
+          for(let child of element.children){
+            r2(child);
+          }
     }
 
 
