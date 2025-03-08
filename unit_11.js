@@ -31,7 +31,9 @@ function t2(elem) {
     r2(elem);
 
     function r2(element) {
-
+        if(!isNaN(parseInt(element.textContent))){
+            s += parseInt(element.textContent)
+        }
     }
 
 
