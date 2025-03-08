@@ -57,7 +57,17 @@ function t3(elem) {
     r3(elem);
 
     function r3(element) {
-
+        if (!['SPAN', 'B', 'I', 'P'].includes(element.tagName)) {
+            out += element.textContent.trim() + ' ';
+        }
+        
+        for (let child of element.childNodes) {
+            if (child.nodeType === 3) { // Текстовый узел
+                out += child.textContent.trim() + ' ';
+            } else if (child.nodeType === 1) { // Узел элемента
+                r3(child);
+            }
+        }
       
     }
 
