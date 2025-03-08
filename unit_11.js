@@ -7,8 +7,12 @@ function t1(elem) {
 
     function r1(element) {
 out += element.tagName + ' ';
+ 
+   for(let child of element.children){
+    r1(child)
+   }
     }
-
+      r1(elem);
 
     return out;
 }
