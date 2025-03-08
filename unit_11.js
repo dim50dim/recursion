@@ -14,7 +14,7 @@ out += element.tagName + ' ';
     }
       r1(elem);
 
-    return out;
+    return out.trim();
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
