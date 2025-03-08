@@ -89,7 +89,13 @@ function t4(elem) {
     r4(elem);
 
     function r4(element) {
-             element.style.background = 'orange'
+      if(element.children.length === 0){
+        element.style.background = 'orange';
+      }else{
+        for(let child of element.children){
+            r4(child)
+        }
+      }
     }
 }
 
