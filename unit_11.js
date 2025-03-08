@@ -113,7 +113,15 @@ function t5(elem) {
     r5(elem);
 
     function r5(element) {
-
+           if(element.children.length === 0){
+            let mark = document.createElement('mark');
+            mark.innerHTML = element.innerHTML;
+            element.replaceWith(mark);
+           }else{
+            for(let child of Array.from(element.children)){
+                r5(child);
+            }
+           }
     }
 }
 
