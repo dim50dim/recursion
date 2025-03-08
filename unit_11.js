@@ -6,7 +6,7 @@ function t1(elem) {
     r1(elem);
 
     function r1(element) {
-
+out += element.tagName + ' ';
     }
 
 
