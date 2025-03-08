@@ -31,8 +31,8 @@ function t2(elem) {
     r2(elem);
 
     function r2(element) {
-        if(!isNaN(parseInt(element.textContent))){
-            s += parseInt(element.textContent)
+        if(!isNaN(+(element.textContent))){
+            s += +(element.textContent)
         }
           for(let child of element.children){
             r2(child);
