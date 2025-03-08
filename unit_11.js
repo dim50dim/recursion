@@ -89,7 +89,7 @@ function t4(elem) {
     r4(elem);
 
     function r4(element) {
-
+             element.style.background = 'orange'
     }
 }
 
